@@ -4,6 +4,7 @@ import Box from "./components/Box.jsx"
 import Proyects from "./components/Proyects.jsx"
 import Habilidades from "./components/Habilidades.jsx"
 import ImgModal from "./components/ImgModal.jsx"
+import Footer from "./components/Footer.jsx"
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
             <section className="section-habilidades" id="habilidades">
                 <Habilidades />
             </section>
+            <Footer />
             <ImgModal />
         </>
     )

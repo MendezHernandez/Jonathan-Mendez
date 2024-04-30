@@ -39,12 +39,14 @@ const Navbar = () => {
             };
     }, [])
     
+    console.log(urlActual.split('/')[4])
+
     return (
         <nav style={scrolled ? {boxShadow: '3px 5px 5px var(--shadow)'} : {}}>
             <div style={scrolled ? {borderBottom: 'none'} : {}}>
                 <h2 className='logo'>JM</h2>
                 <li>
-                    <a style={urlActual.split('/')[4] === "#sobre-mi" | urlActual.split('/')[3] === "" ? {color: "var(--primary)"} : {}} href="#sobre-mi">Sobre mí</a>
+                    <a style={urlActual.split('/')[4] === "#sobre-mi" | urlActual.split('/')[4] === "" ? {color: "var(--primary)"} : {}} href="#sobre-mi">Sobre mí</a>
                     <a style={urlActual.split('/')[4] === "#proyectos" ? {color: "var(--primary)"} : {}} href="#proyectos">Proyectos</a>
                     <a style={urlActual.split('/')[4] === "#habilidades" ? {color: "var(--primary)"} : {}} href="#habilidades">Habilidades</a>
                     {
