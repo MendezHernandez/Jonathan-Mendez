@@ -1,0 +1,27 @@
+.ctn-icon-habilidad {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nombre-habilidad {
+    position: absolute;
+    color: transparent;
+    transition: .2s ease-in-out;
+    font-size: large;
+}
+
+.icon-habilidad {
+    height: 10rem;
+    transition: .2s ease-in-out;
+}
+
+.ctn-icon-habilidad:hover > .icon-habilidad {
+    opacity: .2;
+}
+
+.ctn-icon-habilidad:hover > .nombre-habilidad {
+    color: var(--complement);
+    opacity: 1;
+}

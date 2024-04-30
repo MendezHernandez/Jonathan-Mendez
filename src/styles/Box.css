@@ -1,0 +1,14 @@
+.box {
+    border: solid 1px var(--complement);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.box h2 {
+    position: absolute;
+    top: -3rem;
+    left: 4rem;
+    background-color: var(--back);
+    padding: 0 1rem;
+}

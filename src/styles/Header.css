@@ -1,0 +1,75 @@
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+/* header img {
+    width: 20rem;
+    height: 20rem;
+    border: solid 1px var(--complement);
+    border-radius: 1rem;
+} */
+
+header h2 {
+    color: var(--primary);
+    font-size: x-large;
+}
+
+.btn-cv {
+    border: none;
+    border-radius: 1rem;
+    background: linear-gradient(45deg, var(--primary), var(--second));
+    color: #FBFEFF;
+    height: 3rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: small;
+    text-decoration: none;
+}
+
+.ctn-btn-cv-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-cv:hover {
+    scale: 1.1;
+}
+
+.ctn-nombre {
+    text-align: center;
+}
+
+.ctn-icon-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid white
+}
+
+.ctn-icon-header img {
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+.ctn-icon-header img:hover {
+    scale: 1.1;
+}
+
+@media (max-width: 500px) {
+    header {
+        margin-top: 8rem;
+    }
+}

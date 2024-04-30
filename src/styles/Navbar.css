@@ -1,0 +1,73 @@
+nav {
+    height: 6rem;
+    position: fixed;
+    background-color: var(--back);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 2;
+    transition: .3s ease-in-out;
+}
+
+nav div {
+    background-color: var(--back);
+    border-bottom: 2px solid var(--complement);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20vw;
+    width: 100%;
+    transition: .3s ease-in-out;
+}
+
+.logo {
+    color: var(--back);
+    background-color: var(--complement);
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(--complement);
+    font-size: clamp(.5rem, 6vw, 1.5rem);
+    transition: .2s ease-in-out;
+}
+
+nav li a:hover {
+    scale: 1.1;
+}
+
+.icon-nav {
+    font-size: xx-large;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.icon-nav:hover {
+    scale: 1.1;
+}
+
+@media (max-width: 700px) {
+    nav div {
+        margin: 0 10vw;
+    }
+}
+
+@media (max-width: 500px) {
+    nav div {
+        margin: 0 2vw;
+    }
+}

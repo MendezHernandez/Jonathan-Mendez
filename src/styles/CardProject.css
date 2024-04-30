@@ -1,0 +1,25 @@
+.card-project {
+    background-color: var(--back);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+}
+
+.ctn-imgs-project {
+    overflow-x: scroll;
+    display: flex;
+    height: 15rem;
+}
+
+.img-project {
+    height: 90%;
+    margin-right: 2rem;
+    width: 20rem;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.img-project:hover {
+    scale: 1.02;
+}

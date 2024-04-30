@@ -1,0 +1,113 @@
+/* Importamos una fuente de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
+
+/* Con esto hacemos que la seleccion de texto cambie de color */
+::selection {
+    background-color: var(--complement);
+    color: var(--back);
+}
+
+/* Con esto 1 rem equivale a 10 px */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding: 6rem
+}
+
+
+:root {
+    --back: #FBFEFF;
+    --primary: #00B0F0;
+    --second: #9147C8;
+    --complement: #3B3838;
+    --scroll-thumb: #cecece;
+    --scroll-thumb-hover: #757272;
+    --shadow: #828083;
+}
+
+body {
+    font-family: 'Roboto';
+    background-color: var(--back);
+    margin: 0;
+    align-items: center;
+    color: var(--complement);
+    transition: .3s ease-in-out;
+    line-height: 1.5;
+}
+
+.section-head {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20vw;
+    padding-top: 6rem;
+}
+
+.section-projects{
+    display: flex;
+    flex-direction: column;
+    padding: 0 20vw;
+    background: linear-gradient(45deg, var(--second), var(--primary));
+}
+
+.section-habilidades {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20vw;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1rem, 6vw, 2rem);
+}
+
+p {
+    font-size: clamp(.5rem, 6vw, 1.5rem);
+}
+
+/* Cambia el ancho y color de la scrollbar */
+::-webkit-scrollbar {
+    width: 1rem;
+    background-color: var(--back);
+  }
+  
+  /* Cambia el color del pulgar de la scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb);
+  }
+  
+  /* Puedes personalizar otros estados, como hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroll-thumb-hover);
+  }
+
+  @media (max-width: 700px) {
+    .section-head {
+        padding: 0 10vw;
+    }
+    
+    .section-projects{
+        padding: 0 10vw;
+    }
+    
+    .section-habilidades {
+        padding: 0 10vw;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .section-head {
+        padding: 0 2vw;
+    }
+    
+    .section-projects{
+        padding: 0 2vw;
+    }
+    
+    .section-habilidades {
+        padding: 0 2vw;
+    }
+  }
