@@ -44,9 +44,9 @@ const Navbar = () => {
             <div style={scrolled ? {borderBottom: 'none'} : {}}>
                 <h2 className='logo'>JM</h2>
                 <li>
-                    <a style={urlActual.split('/')[2] === "#sobre-mi" | urlActual.split('/')[3] === "" ? {color: "var(--primary)"} : {}} href="#sobre-mi">Sobre mí</a>
-                    <a style={urlActual.split('/')[2] === "#proyectos" ? {color: "var(--primary)"} : {}} href="#proyectos">Proyectos</a>
-                    <a style={urlActual.split('/')[2] === "#habilidades" ? {color: "var(--primary)"} : {}} href="#habilidades">Habilidades</a>
+                    <a style={urlActual.split('/')[4] === "#sobre-mi" | urlActual.split('/')[3] === "" ? {color: "var(--primary)"} : {}} href="#sobre-mi">Sobre mí</a>
+                    <a style={urlActual.split('/')[4] === "#proyectos" ? {color: "var(--primary)"} : {}} href="#proyectos">Proyectos</a>
+                    <a style={urlActual.split('/')[4] === "#habilidades" ? {color: "var(--primary)"} : {}} href="#habilidades">Habilidades</a>
                     {
                         theme ? 
                         <IoMoonSharp color='#CAD7D9' className='icon-nav' onClick={() => setTheme(!theme)}/>
