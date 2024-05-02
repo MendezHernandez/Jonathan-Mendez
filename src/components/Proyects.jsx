@@ -37,7 +37,7 @@ const Proyects = () => {
     const projects = [
         {
             titulo : 'Sitio Ingeniería en Desarrollo y Gestión de Software',
-            texto : 'Sitio web desarrollado para la Universidad Tecnológica de Escuinapa, con el objetivo de promocionar la carrera de Desarrollo y Gestión de Software. El sitio busca dar a conocer a todos los interesados lo que pueden encontrar si entran a dicha carrera, desde proyectos escolares, testimonios de estudiantes y egresados, entre otros datos relevantes.',
+            texto : 'Sitio web para la Universidad Tecnológica de Escuinapa, con el propósito de promover la carrera de Desarrollo y Gestión de Software. Este sitio tiene como objetivo informar a todos los interesados sobre lo que podrían encontrar al ingresar a esta carrera, incluyendo proyectos escolares, testimonios de estudiantes y egresados, así como otros datos relevantes.',
             img : [
                 {nombreImg : Empresas},
                 {nombreImg : Eventos},
@@ -54,7 +54,7 @@ const Proyects = () => {
         },
         {
             titulo : 'Servicios UT',
-            texto : 'Aplicación web desarrollada como proyecto escolar con el fin de que los alumnos de la Universidad Tecnológica de Escuinapa puedan ofrecer algún servicio, como por ejemplo: limpiar PC, asesorías de inglés, preparación de algún platillo. Por otro lado, los mismos alumnos pueden rentar o comprar dicho servicio por un acuerdo monetario.',
+            texto : 'Aplicación web desarrollada como proyecto escolar con el objetivo de permitir a los alumnos de la Universidad Tecnológica de Escuinapa ofrecer diversos servicios, tales como: limpieza de PCs, asesorías de inglés o preparación de platillos, entre otros. Asimismo, los propios estudiantes tienen la posibilidad de alquilar o comprar estos servicios mediante un acuerdo monetario.',
             img : [
                 {nombreImg : Editar},
                 {nombreImg : Eliminar},
@@ -72,7 +72,7 @@ const Proyects = () => {
             ],
         },
         {
-            titulo : 'Sitio web Emprendedores del pacifico',
+            titulo : 'Sitio web Emprendedores del pacífico',
             texto : 'Sitio web corporativo para el empaque de mangos "Rosa Elena" del grupo "Emprendedores del Pacífico", donde se comparte información acerca de la empresa y sus productos.',
             img : [
                 {nombreImg : Nosotros},

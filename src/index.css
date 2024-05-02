@@ -66,6 +66,7 @@ h2 {
 
 p {
     font-size: clamp(.8rem, 6vw, 1.8rem);
+    text-align: justify;
 }
 
 /* Cambia el ancho y color de la scrollbar */

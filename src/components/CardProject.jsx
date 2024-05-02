@@ -14,7 +14,7 @@ const CardProject = ({titulo, texto, img, herramientas}) => {
                 {
                     img.map((item, index) => {
                         return(
-                            <img onClick={() => {abrirModal(item.nombreImg)}} className='img-project' src={item.nombreImg} key={index} alt="img-project" />
+                            <img onClick={() => {abrirModal(item.nombreImg)}} className='img-project' src={item.nombreImg} key={index} alt={'imagen_proyecto'} />
                         )
                     })
                 }
@@ -24,7 +24,7 @@ const CardProject = ({titulo, texto, img, herramientas}) => {
                     herramientas.map((item, index) => {
                         return(
 
-                            <img key={index} style={{height: '5rem'}} src={item.herramienta} alt="" />
+                            <img key={index} style={{height: '5rem'}} src={item.herramienta} alt={'herramienta'} />
                         )
                     })
                 }

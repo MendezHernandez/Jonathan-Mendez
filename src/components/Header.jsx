@@ -3,7 +3,7 @@ import '../styles/Header.css'
 import Linkeding from '../assets/icons/linkedin.png'
 import Github from '../assets/icons/github.png'
 import { useInView } from "react-intersection-observer";
-import PDF from '../assets/cv.pdf'
+import PDF from '../assets/JonathanCV.pdf'
 
 const Header = () => {
 
@@ -20,7 +20,7 @@ const Header = () => {
                 <h2>Desarrollador web</h2>
                 <div className='ctn-btn-cv-icon'>
                     <a download={'Jonathan_Méndez_CV'} href={PDF} className='btn-cv'>Descargar CV</a>
-                    <a className='ctn-icon-header' href="https://www.linkedin.com/in/jonathan-méndez-bb338129b" target="_blank"><img src={Linkeding} alt="" /></a>
+                    <a className='ctn-icon-header' href="https://www.linkedin.com/in/jonathan-méndez-bb338129b" target="_blank"><img src={Linkeding} alt="Linkeding" /></a>
                     {/* <a className='ctn-icon-header' href="https://github.com/MendezHernandez" target="_blank"><img src={Github} alt="" /></a> */}
                 </div>
             </div>

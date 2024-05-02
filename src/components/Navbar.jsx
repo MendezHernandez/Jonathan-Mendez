@@ -38,8 +38,6 @@ const Navbar = () => {
             window.removeEventListener('scroll', obtenerURL);
             };
     }, [])
-    
-    console.log(urlActual.split('/')[4])
 
     return (
         <nav style={scrolled ? {boxShadow: '3px 5px 5px var(--shadow)'} : {}}>

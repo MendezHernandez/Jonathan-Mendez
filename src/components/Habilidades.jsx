@@ -60,7 +60,7 @@ const Habilidades = () => {
                                 item.atributos.map((item, index) => {
                                     return (
                                         <div className='ctn-icon-habilidad' key={index}>
-                                            <img className='icon-habilidad'  src={item.img} alt="" />
+                                            <img className='icon-habilidad'  src={item.img} alt={item.img} />
                                             <span className='nombre-habilidad'>{item.nombre}</span>
                                         </div>
                                     )

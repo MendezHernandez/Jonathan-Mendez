@@ -1,5 +1,5 @@
 footer {
-    background-color: var(--primary);
+    background-color: var(--complement);
     padding: 1rem 20vw;
     display: flex;
     justify-content: space-between;
@@ -10,9 +10,6 @@ footer {
 footer h3 {
     font-size: medium;
     color: var(--back);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 footer img {
@@ -20,6 +17,20 @@ footer img {
     border-radius: 50%;
     height: 3rem;
     margin-right: 1rem;
+}
+
+.enlace-gmail {
+    font-size: medium;
+    color: var(--back);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.enlace-gmail:hover {
+    scale: 1.03;
 }
 
 @media (max-width: 700px) {
