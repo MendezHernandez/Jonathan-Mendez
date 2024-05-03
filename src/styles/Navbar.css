@@ -71,3 +71,14 @@ nav li a:hover {
         margin: 0 2vw;
     }
 }
+
+@media (max-width: 375px) {
+    .logo {
+        display: none;
+    }
+
+    .ctn-li-nav {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -49,6 +49,7 @@ const Proyects = () => {
                 {herramienta : CSS},
                 {herramienta : JS},
                 {herramienta : ReactJS},
+                {herramienta : PHP},
                 {herramienta : MySQL},
             ],
         },

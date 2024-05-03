@@ -41,7 +41,7 @@ const Navbar = () => {
 
     return (
         <nav style={scrolled ? {boxShadow: '3px 5px 5px var(--shadow)'} : {}}>
-            <div style={scrolled ? {borderBottom: 'none'} : {}}>
+            <div className='ctn-li-nav' style={scrolled ? {borderBottom: 'none'} : {}}>
                 <h2 className='logo'>JM</h2>
                 <li>
                     <a style={urlActual.split('/')[4] === "#sobre-mi" | urlActual.split('/')[4] === "" ? {color: "var(--primary)"} : {}} href="#sobre-mi">Sobre mí</a>
