@@ -48,6 +48,9 @@ export function AppContextProvider(props) {
   const [imagenModal, setImagenModal] = useState();
   const [modal, setModal] = useState(false);
   const abrirModal = (img) => {
+    if (modal != true) {
+      setImagenModal("");
+    }
     setModal(!modal);
     setImagenModal(img);
   };
