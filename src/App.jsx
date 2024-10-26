@@ -5,6 +5,7 @@ import Proyects from "./components/Proyects.jsx";
 import Habilidades from "./components/Habilidades.jsx";
 import ImgModal from "./components/ImgModal.jsx";
 import Footer from "./components/Footer.jsx";
+import Loader from "./components/Loader.jsx";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       </section>
       <Footer />
       <ImgModal />
+      <Loader />
     </>
   );
 }

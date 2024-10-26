@@ -1,0 +1,158 @@
+.content-loader {
+  display: flex;
+  background-color: var(--back);
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  height: 100vh;
+  width: 50vw;
+  justify-content: center;
+  align-items: center;
+  animation: openLeft 1.5s 2s linear forwards;
+}
+
+.content-loader::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  height: 0;
+  border-right: 0.3rem solid var(--complement);
+  animation: expandBorder 0.5s 1.5s linear forwards;
+}
+
+.content-loader2 {
+  right: 0;
+  display: flex;
+  background-color: var(--back);
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  height: 100vh;
+  width: 50vw;
+  justify-content: center;
+  align-items: center;
+  animation: openRight 1.5s 2s linear forwards;
+}
+
+.content-text-loader {
+  z-index: 11;
+  position: absolute;
+  right: -50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 30rem;
+  width: 30rem;
+  animation: appear 1.5s;
+}
+
+.text-loader {
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  background-color: var(--complement);
+  padding: 2rem;
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  border: 2rem solid var(--back);
+  animation: showText 1s 0.5s linear forwards;
+}
+
+.content-text-loader::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 9rem;
+  height: 18rem;
+  padding: 4rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1.5s linear 1 forwards, contrac 0.5s 1.5s forwards;
+}
+
+@keyframes showText {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: var(--back);
+  }
+}
+
+@keyframes openRight {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+    display: hidden;
+  }
+}
+
+@keyframes openLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+    display: hidden;
+  }
+}
+
+@keyframes expandBorder {
+  0% {
+    height: 0;
+    top: 50%;
+  }
+  100% {
+    height: 100%; /* Expande hasta arriba */
+    top: 0;
+  }
+}
+
+@keyframes contrac {
+  0% {
+    width: 9rem;
+  }
+  100% {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    background-color: var(--second);
+  }
+  100% {
+    transform: rotate(360deg);
+    background-color: var(--complement);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* 
+@keyframes borderAnimation {
+  0% {
+    border: 2px dashed transparent;
+  }
+  100% {
+    border-right: 2px dashed var(--primary);
+  }
+} */
