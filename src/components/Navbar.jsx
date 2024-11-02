@@ -40,7 +40,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav style={scrolled ? { boxShadow: "3px 5px 5px var(--shadow)" } : {}}>
+    <nav
+      style={scrolled ? { boxShadow: "3px 5px 5px var(--shadow)" } : {}}
+      id="navbar"
+    >
       <div
         className="ctn-li-nav"
         style={scrolled ? { borderBottom: "none" } : {}}

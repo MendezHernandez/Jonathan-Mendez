@@ -18,9 +18,11 @@ const ImgModal = () => {
 
   if (modal === true) {
     const htmlElement = document.documentElement;
+    htmlElement.style.paddingRight = "10px";
     htmlElement.style.overflow = "hidden";
   } else {
     const htmlElement = document.documentElement;
+    htmlElement.style.paddingRight = "0px";
     htmlElement.style.overflow = "auto";
   }
 

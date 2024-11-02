@@ -6,9 +6,11 @@ const Loader = () => {
   if (loading === true) {
     const htmlElement = document.documentElement;
     htmlElement.style.overflow = "hidden";
+    htmlElement.style.paddingRight = "1rem";
   } else {
     const htmlElement = document.documentElement;
     htmlElement.style.overflow = "auto";
+    htmlElement.style.paddingRight = "0rem";
   }
 
   useEffect(() => {
