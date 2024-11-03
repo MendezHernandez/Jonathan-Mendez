@@ -1,27 +1,28 @@
 .ctn-icon-habilidad {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nombre-habilidad {
-    position: absolute;
-    color: transparent;
-    transition: .2s ease-in-out;
-    font-size: large;
+  position: absolute;
+  color: transparent;
+  transition: 0.2s ease-in-out;
+  font-size: large;
+  text-align: center;
 }
 
 .icon-habilidad {
-    height: 10rem;
-    transition: .2s ease-in-out;
+  height: 10rem;
+  transition: 0.2s ease-in-out;
 }
 
 .ctn-icon-habilidad:hover > .icon-habilidad {
-    opacity: .2;
+  opacity: 0.2;
 }
 
 .ctn-icon-habilidad:hover > .nombre-habilidad {
-    color: var(--complement);
-    opacity: 1;
+  color: var(--complement);
+  opacity: 1;
 }

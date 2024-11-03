@@ -92,7 +92,7 @@ body {
   background: linear-gradient(45deg, var(--second), var(--primary));
 }
 
-.section-habilidades {
+.global-style-section {
   display: flex;
   flex-direction: column;
   padding: 0 20vw;
@@ -137,7 +137,7 @@ p {
     padding: 0 10vw;
   }
 
-  .section-habilidades {
+  .global-style-section {
     padding: 0 10vw;
   }
 }
@@ -151,7 +151,7 @@ p {
     padding: 0 2vw;
   }
 
-  .section-habilidades {
+  .global-style-section {
     padding: 0 2vw;
   }
 }

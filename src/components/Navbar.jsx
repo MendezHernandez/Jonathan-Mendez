@@ -4,6 +4,7 @@ import { IoSunny } from "react-icons/io5";
 import { IoMoonSharp } from "react-icons/io5";
 import "../styles/Navbar.css";
 import { AppContext } from "../AppContext";
+import { itemsNavbar } from "../Data/itemsNavbar";
 
 const Navbar = () => {
   //Scrolled es para el inicio cuando la navbar es transparente
@@ -50,37 +51,22 @@ const Navbar = () => {
       >
         <h2 className="logo">JM</h2>
         <li>
-          <a
-            style={
-              (urlActual.split("/")[4] === "#sobre-mi") |
-              (urlActual.split("/")[4] === "")
-                ? { color: "var(--primary)" }
-                : {}
-            }
-            href="#sobre-mi"
-          >
-            Sobre mí
-          </a>
-          <a
-            style={
-              urlActual.split("/")[4] === "#proyectos"
-                ? { color: "var(--primary)" }
-                : {}
-            }
-            href="#proyectos"
-          >
-            Proyectos
-          </a>
-          <a
-            style={
-              urlActual.split("/")[4] === "#habilidades"
-                ? { color: "var(--primary)" }
-                : {}
-            }
-            href="#habilidades"
-          >
-            Habilidades
-          </a>
+          {itemsNavbar.map((item, index) => {
+            return (
+              <a
+                key={index}
+                href={item.url}
+                style={
+                  urlActual.split("/")[2] === item.url
+                    ? { color: "var(--primary)" }
+                    : {}
+                }
+              >
+                {item.name}
+              </a>
+            );
+          })}
+
           {theme ? (
             <IoMoonSharp
               color="#CAD7D9"

@@ -1,0 +1,25 @@
+/* Certofocations */
+.main-ctn-certifications {
+  padding: 5rem;
+}
+
+.ctn-list-certifications {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Card Certification */
+.ctn-certification {
+  text-align: center;
+  flex: 1 1 18rem;
+}
+
+.img-certification {
+  width: auto;
+  min-height: 10rem;
+  max-height: 18rem;
+  box-shadow: 1px 5px 5px var(--shadow-box);
+}
