@@ -5,6 +5,29 @@ import { IoMoonSharp } from "react-icons/io5";
 import "../styles/Navbar.css";
 import { AppContext } from "../AppContext";
 import { itemsNavbar } from "../Data/itemsNavbar";
+import { MenuBurger } from "./Icons";
+
+export const LinksNavbarSidebar = ({ urlActual, className }) => {
+  return (
+    <li className={className}>
+      {itemsNavbar.map((item, index) => {
+        return (
+          <a
+            key={index}
+            href={item.url}
+            style={
+              urlActual.split("/")[4] === item.url
+                ? { color: "var(--primary)" }
+                : {}
+            }
+          >
+            {item.name}
+          </a>
+        );
+      })}
+    </li>
+  );
+};
 
 const Navbar = () => {
   //Scrolled es para el inicio cuando la navbar es transparente
@@ -23,22 +46,27 @@ const Navbar = () => {
     };
   }, []);
 
-  const { theme, setTheme } = useContext(AppContext);
+  const { theme, setTheme, ActiveSidebar, urlActual } = useContext(AppContext);
 
-  const [urlActual, setUrlActual] = useState("");
-
-  useEffect(() => {
-    const obtenerURL = () => {
-      setUrlActual(window.location.href);
-    };
-    // Agregar un escucha de evento de scroll cuando el componente se monta
-    window.addEventListener("scroll", obtenerURL);
-
-    // Limpiar el escucha de evento cuando el componente se desmonta
-    return () => {
-      window.removeEventListener("scroll", obtenerURL);
-    };
-  }, []);
+  const ButtomChangeTheme = () => {
+    if (theme) {
+      return (
+        <IoMoonSharp
+          color="#CAD7D9"
+          className="icon-nav"
+          onClick={() => setTheme(!theme)}
+        />
+      );
+    } else {
+      return (
+        <IoSunny
+          color="#FFD859"
+          className="icon-nav"
+          onClick={() => setTheme(!theme)}
+        />
+      );
+    }
+  };
 
   return (
     <nav
@@ -50,37 +78,17 @@ const Navbar = () => {
         style={scrolled ? { borderBottom: "none" } : {}}
       >
         <h2 className="logo">JM</h2>
-        <li>
-          {itemsNavbar.map((item, index) => {
-            return (
-              <a
-                key={index}
-                href={item.url}
-                style={
-                  urlActual.split("/")[2] === item.url
-                    ? { color: "var(--primary)" }
-                    : {}
-                }
-              >
-                {item.name}
-              </a>
-            );
-          })}
-
-          {theme ? (
-            <IoMoonSharp
-              color="#CAD7D9"
-              className="icon-nav"
-              onClick={() => setTheme(!theme)}
-            />
-          ) : (
-            <IoSunny
-              color="#FFD859"
-              className="icon-nav"
-              onClick={() => setTheme(!theme)}
-            />
-          )}
-        </li>
+        <LinksNavbarSidebar
+          urlActual={urlActual}
+          className={"ctn-links-navbar"}
+        />
+        <article className="ctn-options-buttons">
+          <ButtomChangeTheme />
+          <MenuBurger
+            className="menu-burger-icon"
+            onClick={() => ActiveSidebar()}
+          />
+        </article>
       </div>
     </nav>
   );

@@ -45,6 +45,11 @@ export function AppContextProvider(props) {
     }
   }, [theme]);
 
+  const [isSidebarActive, setIsSidebarActive] = useState(false);
+  const ActiveSidebar = () => {
+    setIsSidebarActive(!isSidebarActive);
+  };
+
   const [imagenModal, setImagenModal] = useState();
   const [modal, setModal] = useState(false);
   const abrirModal = (img) => {
@@ -55,6 +60,21 @@ export function AppContextProvider(props) {
     setImagenModal(img);
   };
 
+  const [urlActual, setUrlActual] = useState("");
+
+  useEffect(() => {
+    const obtenerURL = () => {
+      setUrlActual(window.location.href);
+    };
+    // Agregar un escucha de evento de scroll cuando el componente se monta
+    window.addEventListener("scroll", obtenerURL);
+
+    // Limpiar el escucha de evento cuando el componente se desmonta
+    return () => {
+      window.removeEventListener("scroll", obtenerURL);
+    };
+  }, []);
+
   return (
     <AppContext.Provider
       // definir las variables y funciones a exportar
@@ -64,6 +84,9 @@ export function AppContextProvider(props) {
         abrirModal,
         modal,
         imagenModal,
+        ActiveSidebar,
+        isSidebarActive,
+        urlActual,
       }}
     >
       {/* indicar que todas los componentes dentro del contexto (toda la app), podrán acceder a sus variables y funciones */}

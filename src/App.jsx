@@ -7,6 +7,7 @@ import ImgModal from "./components/ImgModal.jsx";
 import Footer from "./components/Footer.jsx";
 import Loader from "./components/Loader.jsx";
 import Certifications from "./components/Certifications.jsx";
+import Sidebar from "./components/Sidebar.jsx";
 
 function App() {
   const infoHeader =
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Sidebar />
       <section className="section-head" id="sobre-mi">
         <Header />
         <Box texto={infoHeader} titulo={"Sobre mí"} />

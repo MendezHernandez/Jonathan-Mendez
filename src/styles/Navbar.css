@@ -33,21 +33,21 @@ nav div {
   user-select: none;
 }
 
-nav li {
+.ctn-links-navbar {
   list-style: none;
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-nav li a {
+.ctn-links-navbar a {
   text-decoration: none;
   color: var(--complement);
   font-size: clamp(0.5rem, 6vw, 1.5rem);
   transition: 0.2s ease-in-out;
 }
 
-nav li a:hover {
+.ctn-links-navbar a:hover {
   scale: 1.1;
 }
 
@@ -61,9 +61,23 @@ nav li a:hover {
   rotate: 45deg;
 }
 
+.ctn-options-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  nav div {
+    margin: 0 14vw;
+  }
+}
+
 @media (max-width: 700px) {
   nav div {
-    margin: 0 10vw;
+    margin: 0 8vw;
   }
 }
 
@@ -73,13 +87,8 @@ nav li a:hover {
   }
 }
 
-@media (max-width: 375px) {
-  .logo {
+@media (max-width: 600px) {
+  .ctn-links-navbar {
     display: none;
-  }
-
-  .ctn-li-nav {
-    display: flex;
-    justify-content: center;
   }
 }

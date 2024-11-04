@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import "../styles/ImgModal.css";
 import { AppContext } from "../AppContext";
 import { useRef } from "react";
-import { IoIosCloseCircleOutline } from "react-icons/io";
+import { CloseIcon } from "./Icons";
 
 const ImgModal = () => {
   const modalRef = useRef(null);
@@ -47,7 +47,7 @@ const ImgModal = () => {
 
   return (
     <dialog ref={modalRef}>
-      <IoIosCloseCircleOutline
+      <CloseIcon
         className="btn-close-modal"
         onClick={() => abrirModal(imagenModal)}
       />

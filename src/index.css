@@ -128,17 +128,31 @@ p {
   background-color: var(--scroll-thumb-hover);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .section-head {
-    padding: 0 10vw;
+    padding: 4rem 14vw;
   }
 
   .section-projects {
-    padding: 0 10vw;
+    padding: 0 14vw;
   }
 
   .global-style-section {
-    padding: 0 10vw;
+    padding: 0 14vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-head {
+    padding: 0 8vw;
+  }
+
+  .section-projects {
+    padding: 0 8vw;
+  }
+
+  .global-style-section {
+    padding: 0 8vw;
   }
 }
 
@@ -153,5 +167,16 @@ p {
 
   .global-style-section {
     padding: 0 2vw;
+  }
+}
+
+/* Icons */
+.menu-burger-icon {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .menu-burger-icon {
+    display: block;
   }
 }

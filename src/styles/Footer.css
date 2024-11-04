@@ -1,46 +1,46 @@
 footer {
-    background-color: var(--complement);
-    padding: 1rem 20vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  background-color: var(--primary);
+  padding: 1rem 20vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 footer h3 {
-    font-size: medium;
-    color: var(--back);
+  font-size: medium;
+  color: var(--back);
 }
 
 footer img {
-    background-color: white;
-    border-radius: 50%;
-    height: 3rem;
-    margin-right: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  height: 3rem;
+  margin-right: 1rem;
 }
 
 .enlace-gmail {
-    font-size: medium;
-    color: var(--back);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: .3s ease-in-out;
+  font-size: medium;
+  color: var(--back);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 
 .enlace-gmail:hover {
-    scale: 1.03;
+  scale: 1.03;
 }
 
 @media (max-width: 700px) {
-    footer {
-        padding: 1rem 10vw;
-    }
+  footer {
+    padding: 1rem 10vw;
+  }
 }
 
 @media (max-width: 500px) {
-    footer {
-        padding: 1rem 2vw;
-    }
+  footer {
+    padding: 1rem 2vw;
+  }
 }
