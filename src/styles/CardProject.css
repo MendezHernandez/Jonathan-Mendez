@@ -33,7 +33,7 @@
 
 .tag-in-develop {
   background-color: var(--second);
-  color: var(--back);
+  color: #fbfeff;
   padding: 0.5rem 1rem;
   font-size: large;
 }

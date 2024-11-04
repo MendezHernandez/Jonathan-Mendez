@@ -71,7 +71,7 @@ const Navbar = () => {
 
   return (
     <nav
-      style={scrolled ? { boxShadow: "3px 5px 5px var(--shadow)" } : {}}
+      style={scrolled ? { boxShadow: "0px 2px 10px var(--shadow)" } : {}}
       id="navbar"
     >
       <div
