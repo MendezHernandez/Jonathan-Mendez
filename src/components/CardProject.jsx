@@ -3,13 +3,22 @@ import "../styles/CardProject.css";
 import { AppContext } from "../AppContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
-const CardProject = ({ titulo, texto, img, herramientas }) => {
+const CardProject = ({ titulo, texto, img, herramientas, inDevelop }) => {
   AOS.init();
   const { abrirModal } = useContext(AppContext);
 
+  const TagInDevelop = ({ showTag }) => {
+    if (showTag === true) {
+      return <span className="tag-in-develop">En desarrollo</span>;
+    }
+  };
+
   return (
     <div className="card-project" data-aos="fade-up">
-      <h2>{titulo}</h2>
+      <div className="ctn-title-and-tag-develop">
+        <h2>{titulo}</h2>
+        <TagInDevelop showTag={inDevelop} />
+      </div>
       <p>{texto}</p>
       <div className="ctn-imgs-project">
         {img.map((item, index) => {

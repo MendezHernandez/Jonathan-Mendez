@@ -11,6 +11,7 @@ import SQL from "../assets/icons/sql.png";
 import Expo from "../assets/icons/expo-dark.png";
 import Express from "../assets/icons/express-js.png";
 import Node from "../assets/icons/node-js.png";
+import Tailwind from "../assets/icons/tailwind.png";
 
 export const skills = [
   {
@@ -32,6 +33,7 @@ export const skills = [
       { nombre: "Node.JS", img: Node },
       { nombre: "Express", img: Express },
       { nombre: "Laravel", img: Laravel },
+      { nombre: "Tailwind", img: Tailwind },
     ],
   },
   {

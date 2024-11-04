@@ -24,3 +24,16 @@
 .img-project:hover {
   scale: 1.02;
 }
+
+.ctn-title-and-tag-develop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag-in-develop {
+  background-color: var(--second);
+  color: var(--back);
+  padding: 0.5rem 1rem;
+  font-size: large;
+}
