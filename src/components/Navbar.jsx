@@ -7,12 +7,13 @@ import { AppContext } from "../AppContext";
 import { itemsNavbar } from "../Data/itemsNavbar";
 import { MenuBurger } from "./Icons";
 
-export const LinksNavbarSidebar = ({ urlActual, className }) => {
+export const LinksNavbarSidebar = ({ urlActual, className, action }) => {
   return (
     <li className={className}>
       {itemsNavbar.map((item, index) => {
         return (
           <a
+            onClick={() => action()}
             key={index}
             href={item.url}
             style={
