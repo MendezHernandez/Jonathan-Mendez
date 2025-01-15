@@ -53,11 +53,13 @@ export function AppContextProvider(props) {
   const [imagenModal, setImagenModal] = useState();
   const [modal, setModal] = useState(false);
   const abrirModal = (img) => {
-    if (modal != true) {
-      setImagenModal("");
-    }
+    console.log(img);
+
     setModal(!modal);
-    setImagenModal(img);
+    setTimeout(() => {
+      setImagenModal(img);
+    }, 500);
+    console.log(img);
   };
 
   const [urlActual, setUrlActual] = useState("");
@@ -66,9 +68,9 @@ export function AppContextProvider(props) {
     const obtenerURL = () => {
       setUrlActual(window.location.href);
     };
+    obtenerURL();
     // Agregar un escucha de evento de scroll cuando el componente se monta
     window.addEventListener("scroll", obtenerURL);
-
     // Limpiar el escucha de evento cuando el componente se desmonta
     return () => {
       window.removeEventListener("scroll", obtenerURL);

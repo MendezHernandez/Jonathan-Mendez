@@ -8,12 +8,16 @@ import { itemsNavbar } from "../Data/itemsNavbar";
 import { MenuBurger } from "./Icons";
 
 export const LinksNavbarSidebar = ({ urlActual, className, action }) => {
+  const onClickLink = () => {
+    action ? action() : "";
+  };
+
   return (
     <li className={className}>
       {itemsNavbar.map((item, index) => {
         return (
           <a
-            onClick={() => action()}
+            onClick={onClickLink}
             key={index}
             href={item.url}
             style={

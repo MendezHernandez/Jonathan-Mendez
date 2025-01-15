@@ -9,7 +9,6 @@ const Header = () => {
 
   return (
     <header>
-      {/* <img style={{padding: '5px', maskImage: 'linear-gradient(to top, transparent .1%, black)'}} src={FotoJoni} alt="foto" /> */}
       <div className="ctn-nombre">
         <h1 ref={ref}>Jonathan Ezequiel Méndez Hernández</h1>
         {inView ? window.history.pushState({}, "", "#sobre-mi") : ""}
@@ -25,7 +24,6 @@ const Header = () => {
           >
             <img src={Linkeding} alt="Linkeding" />
           </a>
-          {/* <a className='ctn-icon-header' href="https://github.com/MendezHernandez" target="_blank"><img src={Github} alt="" /></a> */}
         </div>
       </div>
     </header>

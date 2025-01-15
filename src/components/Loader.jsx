@@ -3,10 +3,9 @@ import "../styles/Loader.css";
 const Loader = () => {
   const [loading, setLoading] = useState(true);
 
-  if (loading === true) {
+  if (loading) {
     const htmlElement = document.documentElement;
     htmlElement.style.overflow = "hidden";
-    htmlElement.style.paddingRight = "1rem";
   } else {
     const htmlElement = document.documentElement;
     htmlElement.style.overflow = "auto";
@@ -19,7 +18,7 @@ const Loader = () => {
     }, 2900);
 
     return () => clearTimeout(load);
-  }, []);
+  }, [loading]);
 
   return (
     <>

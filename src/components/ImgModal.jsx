@@ -31,7 +31,7 @@ const ImgModal = () => {
     const handleKeyDown = (event) => {
       if (modal === true) {
         if (event.key === "Escape") {
-          abrirModal(imagenModal);
+          abrirModal("");
         }
       }
     };
@@ -47,10 +47,7 @@ const ImgModal = () => {
 
   return (
     <dialog ref={modalRef}>
-      <CloseIcon
-        className="btn-close-modal"
-        onClick={() => abrirModal(imagenModal)}
-      />
+      <CloseIcon className="btn-close-modal" onClick={() => abrirModal("")} />
       <img className="img-modal" src={imagenModal} alt="" />
     </dialog>
   );

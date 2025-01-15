@@ -35,7 +35,7 @@ function App() {
       </section>
       <Footer />
       <ImgModal />
-      <Loader />
+      {/* <Loader /> */}
     </>
   );
 }

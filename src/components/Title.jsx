@@ -1,9 +1,7 @@
-import React from 'react'
+import "../styles/Title.css";
 
-const Title = ({title}) => {
-    return (
-        <h2 style={{textAlign: 'center'}}>{title}</h2>
-    )
-}
+const Title = ({ title }) => {
+  return <h2 className="title">{title}</h2>;
+};
 
-export default Title
+export default Title;

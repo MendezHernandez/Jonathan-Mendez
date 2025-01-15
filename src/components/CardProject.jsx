@@ -49,7 +49,7 @@ const CardProject = ({ titulo, texto, img, herramientas, inDevelop }) => {
               key={index}
               style={{ height: "5rem" }}
               src={item.herramienta}
-              alt={"herramienta"}
+              alt={""}
             />
           );
         })}

@@ -15,10 +15,10 @@ html {
 }
 
 :root {
-  --back: #fbfeff;
+  --back: #fbfbfb;
   --primary: #00b0f0;
   --second: #9147c8;
-  --complement: #3b3838;
+  --complement: #464658;
   --scroll-thumb: #cecece;
   --scroll-thumb-hover: #757272;
   --shadow: #828083;
@@ -73,7 +73,7 @@ body {
   opacity: var(--opacity-background-2);
   background-repeat: repeat-x;
   background-size: cover;
-  animation: moveBackground 400s linear infinite;
+  animation: moveBackground 100s linear infinite;
 }
 
 @keyframes moveBackground {
@@ -81,7 +81,7 @@ body {
     background-position: 0 0;
   }
   100% {
-    background-position: -100vw 0;
+    background-position: calc(-100vw + 2px) 0;
   }
 }
 
@@ -101,14 +101,17 @@ body {
 
 h1 {
   font-size: clamp(1.5rem, 6vw, 3rem);
+  color: var(--complement);
 }
 
 h2 {
   font-size: clamp(1rem, 6vw, 2rem);
+  color: var(--complement);
 }
 
 p {
   font-size: clamp(0.8rem, 6vw, 1.8rem);
+  color: var(--complement);
 }
 
 /* Cambia el ancho y color de la scrollbar */
