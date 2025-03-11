@@ -50,16 +50,39 @@ export function AppContextProvider(props) {
     setIsSidebarActive(!isSidebarActive);
   };
 
+  // Modal imagenes
   const [imagenModal, setImagenModal] = useState();
   const [modal, setModal] = useState(false);
-  const abrirModal = (img) => {
-    console.log(img);
+  const [imgsArrayToShow, setImgsArrayToShow] = useState([]);
+  const [imgIndex, setImgIndex] = useState();
 
+  const abrirModal = (img, imgsArray, indexImgActual) => {
     setModal(!modal);
-    setTimeout(() => {
-      setImagenModal(img);
-    }, 500);
-    console.log(img);
+    setImgsArrayToShow(imgsArray);
+    setImgIndex(indexImgActual);
+    imgsArray
+      ? setImagenModal(imgsArray[indexImgActual].nombreImg)
+      : setTimeout(() => {
+          setImagenModal("");
+        }, 500);
+  };
+
+  const nextImgSlider = () => {
+    setImgIndex((prevIndex) => {
+      const newIndex =
+        prevIndex < imgsArrayToShow.length - 1 ? prevIndex + 1 : 0;
+      setImagenModal(imgsArrayToShow[newIndex].nombreImg);
+      return newIndex;
+    });
+  };
+
+  const prevImgSlider = () => {
+    setImgIndex((prevIndex) => {
+      const newIndex =
+        prevIndex === 0 ? imgsArrayToShow.length - 1 : prevIndex - 1;
+      setImagenModal(imgsArrayToShow[newIndex].nombreImg);
+      return newIndex;
+    });
   };
 
   const [urlActual, setUrlActual] = useState("");
@@ -89,6 +112,8 @@ export function AppContextProvider(props) {
         ActiveSidebar,
         isSidebarActive,
         urlActual,
+        nextImgSlider,
+        prevImgSlider,
       }}
     >
       {/* indicar que todas los componentes dentro del contexto (toda la app), podrán acceder a sus variables y funciones */}

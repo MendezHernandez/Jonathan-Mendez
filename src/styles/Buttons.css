@@ -1,0 +1,16 @@
+.btn-next,
+.btn-prev {
+  color: var(--second);
+  background-color: var(--back);
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+}
+
+.btn-next {
+  right: 5%;
+}
+
+.btn-prev {
+  left: 5%;
+}

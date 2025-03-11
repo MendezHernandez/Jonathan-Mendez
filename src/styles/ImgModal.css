@@ -1,6 +1,6 @@
 dialog[open] {
   scale: 1;
-  opacity: 1;
+
   transition: scale 0.5s ease-in-out, opacity 0.5s ease;
 
   @starting-style {
@@ -9,8 +9,6 @@ dialog[open] {
   }
 }
 dialog {
-  opacity: 0;
-
   scale: 0;
   transition: scale 0.5s ease-in-out, display 0.5s ease allow-discrete,
     opacity 0.5s ease;

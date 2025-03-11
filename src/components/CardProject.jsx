@@ -25,7 +25,7 @@ const CardProject = ({ titulo, texto, img, herramientas, inDevelop }) => {
           return (
             <img
               onClick={() => {
-                abrirModal(item.nombreImg);
+                abrirModal(item.nombreImg, img, index);
               }}
               className="img-project"
               src={item.nombreImg}

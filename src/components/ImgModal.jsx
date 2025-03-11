@@ -3,10 +3,12 @@ import "../styles/ImgModal.css";
 import { AppContext } from "../AppContext";
 import { useRef } from "react";
 import { CloseIcon } from "./Icons";
+import { ArrowLeftButton, ArrowRightButton } from "./Buttons";
 
 const ImgModal = () => {
   const modalRef = useRef(null);
-  const { abrirModal, modal, imagenModal } = useContext(AppContext);
+  const { abrirModal, modal, imagenModal, nextImgSlider, prevImgSlider } =
+    useContext(AppContext);
 
   if (modalRef.current) {
     if (modal) {
@@ -46,9 +48,11 @@ const ImgModal = () => {
   }, [modal]);
 
   return (
-    <dialog ref={modalRef}>
+    <dialog ref={modalRef} style={{ userSelect: "none" }}>
       <CloseIcon className="btn-close-modal" onClick={() => abrirModal("")} />
+      <ArrowLeftButton onClick={() => prevImgSlider()} />
       <img className="img-modal" src={imagenModal} alt="" />
+      <ArrowRightButton onClick={() => nextImgSlider()} />
     </dialog>
   );
 };
