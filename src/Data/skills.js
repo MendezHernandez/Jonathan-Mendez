@@ -14,33 +14,33 @@ import Node from "../assets/icons/node-js.png";
 import Tailwind from "../assets/icons/tailwind.png";
 
 export const skills = [
-  {
-    titulo: "Lenguajes",
-    atributos: [
-      { nombre: "HTML", img: HTML },
-      { nombre: "CSS", img: CSS },
-      { nombre: "JavaScript", img: JS },
-      { nombre: "Python", img: Python },
-      { nombre: "PHP", img: PHP },
-      { nombre: "SQL", img: SQL },
-    ],
-  },
-  {
-    titulo: "Frameworks",
-    atributos: [
-      { nombre: "ReactJS / React Native", img: ReactJS },
-      { nombre: "Expo", img: Expo },
-      { nombre: "Node.JS", img: Node },
-      { nombre: "Express", img: Express },
-      { nombre: "Laravel", img: Laravel },
-      { nombre: "Tailwind", img: Tailwind },
-    ],
-  },
-  {
-    titulo: "Versionamiento",
-    atributos: [
-      { nombre: "Git", img: Git },
-      { nombre: "GitHub", img: GitHub },
-    ],
-  },
+    {
+        titulo: "Lenguajes",
+        atributos: [
+            { nombre: "HTML", img: HTML },
+            { nombre: "CSS", img: CSS },
+            { nombre: "JavaScript", img: JS },
+            // { nombre: "Python", img: Python },
+            { nombre: "PHP", img: PHP },
+            { nombre: "SQL", img: SQL },
+        ],
+    },
+    {
+        titulo: "Frameworks",
+        atributos: [
+            { nombre: "ReactJS / React Native", img: ReactJS },
+            // { nombre: "Expo", img: Expo },
+            // { nombre: "Node.JS", img: Node },
+            // { nombre: "Express", img: Express },
+            { nombre: "Laravel", img: Laravel },
+            { nombre: "Tailwind", img: Tailwind },
+        ],
+    },
+    {
+        titulo: "Versionamiento",
+        atributos: [
+            { nombre: "Git", img: Git },
+            { nombre: "GitHub", img: GitHub },
+        ],
+    },
 ];

@@ -3,59 +3,82 @@ import "../styles/CardProject.css";
 import { AppContext } from "../AppContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
-const CardProject = ({ titulo, texto, img, herramientas, inDevelop }) => {
-  AOS.init();
-  const { abrirModal } = useContext(AppContext);
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
-  const TagInDevelop = ({ showTag }) => {
-    if (showTag === true) {
-      return <span className="tag-in-develop">En desarrollo</span>;
-    }
-  };
+const CardProject = ({
+    titulo,
+    texto,
+    img,
+    herramientas,
+    inDevelop,
+    siteLink,
+}) => {
+    AOS.init();
+    const { abrirModal } = useContext(AppContext);
 
-  return (
-    <div className="card-project" data-aos="fade-up">
-      <div className="ctn-title-and-tag-develop">
-        <h2>{titulo}</h2>
-        <TagInDevelop showTag={inDevelop} />
-      </div>
-      <p>{texto}</p>
-      <div className="ctn-imgs-project">
-        {img.map((item, index) => {
-          return (
-            <img
-              onClick={() => {
-                abrirModal(item.nombreImg, img, index);
-              }}
-              className="img-project"
-              src={item.nombreImg}
-              key={index}
-              alt={"imagen_proyecto"}
-            />
-          );
-        })}
-      </div>
-      <div
-        style={{
-          display: "flex",
-          gap: "2rem",
-          marginTop: "2rem",
-          flexWrap: "wrap",
-        }}
-      >
-        {herramientas.map((item, index) => {
-          return (
-            <img
-              key={index}
-              style={{ height: "5rem" }}
-              src={item.herramienta}
-              alt={""}
-            />
-          );
-        })}
-      </div>
-    </div>
-  );
+    const TagInDevelop = ({ showTag }) => {
+        if (showTag === true) {
+            return <span className="tag-in-develop">En desarrollo</span>;
+        }
+    };
+
+    return (
+        <div className="card-project" data-aos="fade-up">
+            <div className="ctn-title-and-tag-develop">
+                <h2>{titulo}</h2>
+                <TagInDevelop showTag={inDevelop} />
+                {siteLink != "" ? (
+                    <a
+                        style={{
+                            fontSize: "xx-large",
+                            color: "var(--primary)",
+                        }}
+                        target="_blank"
+                        href={siteLink}
+                    >
+                        <FaArrowUpRightFromSquare />
+                    </a>
+                ) : (
+                    ""
+                )}
+            </div>
+            <p>{texto}</p>
+            <div className="ctn-imgs-project">
+                {img.map((item, index) => {
+                    return (
+                        <img
+                            onClick={() => {
+                                abrirModal(item.nombreImg, img, index);
+                            }}
+                            className="img-project"
+                            src={item.nombreImg}
+                            key={index}
+                            alt={"imagen_proyecto"}
+                        />
+                    );
+                })}
+            </div>
+            <div
+                style={{
+                    display: "flex",
+                    gap: "2rem",
+                    marginTop: "2rem",
+                    flexWrap: "wrap",
+                }}
+            >
+                {herramientas.map((item, index) => {
+                    return (
+                        <img
+                            key={index}
+                            style={{ height: "5rem" }}
+                            src={item.herramienta}
+                            alt={""}
+                        />
+                    );
+                })}
+            </div>
+        </div>
+    );
 };
 
 export default CardProject;

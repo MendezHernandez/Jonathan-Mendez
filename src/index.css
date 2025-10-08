@@ -3,182 +3,182 @@
 
 /* Con esto hacemos que la seleccion de texto cambie de color */
 ::selection {
-  background-color: var(--complement);
-  color: var(--back);
+    background-color: var(--complement);
+    color: var(--back);
 }
 
 /* Con esto 1 rem equivale a 10 px */
 html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-  scroll-padding: 6rem;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding: 6rem;
 }
 
 :root {
-  --back: #fbfbfb;
-  --primary: #00b0f0;
-  --second: #9147c8;
-  --complement: #113947;
-  --scroll-thumb: #cecece;
-  --scroll-thumb-hover: #757272;
-  --shadow: #828083;
-  --opacity-background-1: 0.6;
-  --opacity-background-2: 0.4;
-  --border-box: white;
-  --shadow-box: rgb(210, 210, 210);
+    --back: #fbfbfb;
+    --primary: #0caae3;
+    --second: #9147c8;
+    --complement: #0f2831;
+    --scroll-thumb: #cecece;
+    --scroll-thumb-hover: #757272;
+    --shadow: #828083;
+    --opacity-background-1: 0.6;
+    --opacity-background-2: 0.4;
+    --border-box: white;
+    --shadow-box: rgb(210, 210, 210);
 }
 
 body {
-  font-family: "Roboto";
-  background-color: var(--back);
-  margin: 0;
-  align-items: center;
-  color: var(--complement);
-  transition: 0.3s ease-in-out;
-  line-height: 1.5;
+    font-family: "Roboto";
+    background-color: var(--back);
+    margin: 0;
+    align-items: center;
+    color: var(--complement);
+    transition: 0.3s ease-in-out;
+    line-height: 1.5;
 }
 
 .section-head {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 6rem 20vw;
-  overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 20vw;
+    overflow: hidden;
 }
 
 .section-head::before {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  top: 4rem;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("./assets/icons/nube1.png");
-  opacity: var(--opacity-background-1);
-  background-size: cover;
-  background-repeat: repeat-x;
-  animation: moveBackground 100s linear infinite;
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/icons/nube1.png");
+    opacity: var(--opacity-background-1);
+    background-size: cover;
+    background-repeat: repeat-x;
+    animation: moveBackground 100s linear infinite;
 }
 
 .section-head::after {
-  z-index: -2;
-  content: "";
-  position: absolute;
-  top: 4rem;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("./assets/icons/nube2.png");
-  opacity: var(--opacity-background-2);
-  background-repeat: repeat-x;
-  background-size: cover;
-  animation: moveBackground 100s linear infinite;
+    z-index: -2;
+    content: "";
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/icons/nube2.png");
+    opacity: var(--opacity-background-2);
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation: moveBackground 100s linear infinite;
 }
 
 @keyframes moveBackground {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: calc(-100vw + 2px) 0;
-  }
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: calc(-100vw + 2px) 0;
+    }
 }
 
 .section-projects {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 20vw;
-  background: linear-gradient(45deg, var(--second), var(--primary));
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 20vw;
+    background: linear-gradient(45deg, var(--second), var(--primary));
 }
 
 .global-style-section {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20vw;
-  margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20vw;
+    margin-bottom: 2rem;
 }
 
 h1 {
-  font-size: clamp(1.5rem, 6vw, 3rem);
-  color: var(--complement);
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    color: var(--complement);
 }
 
 h2 {
-  font-size: clamp(1rem, 6vw, 2rem);
-  color: var(--complement);
+    font-size: clamp(1rem, 6vw, 2rem);
+    color: var(--complement);
 }
 
 p {
-  font-size: clamp(0.8rem, 6vw, 1.8rem);
-  color: var(--complement);
+    font-size: clamp(0.8rem, 6vw, 1.8rem);
+    color: var(--complement);
 }
 
 /* Cambia el ancho y color de la scrollbar */
 ::-webkit-scrollbar {
-  width: 1rem;
-  background-color: var(--back);
+    width: 1rem;
+    background-color: var(--back);
 }
 
 /* Cambia el color del pulgar de la scrollbar */
 ::-webkit-scrollbar-thumb {
-  background-color: var(--scroll-thumb);
+    background-color: var(--scroll-thumb);
 }
 
 /* Puedes personalizar otros estados, como hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--scroll-thumb-hover);
+    background-color: var(--scroll-thumb-hover);
 }
 
 @media (max-width: 900px) {
-  .section-head {
-    padding: 4rem 14vw;
-  }
+    .section-head {
+        padding: 4rem 14vw;
+    }
 
-  .section-projects {
-    padding: 0 14vw;
-  }
+    .section-projects {
+        padding: 0 14vw;
+    }
 
-  .global-style-section {
-    padding: 0 14vw;
-  }
+    .global-style-section {
+        padding: 0 14vw;
+    }
 }
 
 @media (max-width: 700px) {
-  .section-head {
-    padding: 0 8vw;
-  }
+    .section-head {
+        padding: 0 8vw;
+    }
 
-  .section-projects {
-    padding: 0 8vw;
-  }
+    .section-projects {
+        padding: 0 8vw;
+    }
 
-  .global-style-section {
-    padding: 0 8vw;
-  }
+    .global-style-section {
+        padding: 0 8vw;
+    }
 }
 
 @media (max-width: 500px) {
-  .section-head {
-    padding: 0 2vw;
-  }
+    .section-head {
+        padding: 0 2vw;
+    }
 
-  .section-projects {
-    padding: 0 2vw;
-  }
+    .section-projects {
+        padding: 0 2vw;
+    }
 
-  .global-style-section {
-    padding: 0 2vw;
-  }
+    .global-style-section {
+        padding: 0 2vw;
+    }
 }
 
 /* Icons */
 .menu-burger-icon {
-  display: none;
+    display: none;
 }
 
 @media (max-width: 600px) {
-  .menu-burger-icon {
-    display: block;
-  }
+    .menu-burger-icon {
+        display: block;
+    }
 }
